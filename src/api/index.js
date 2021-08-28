@@ -1,5 +1,7 @@
 import firebase from 'firebase/app';
 
+
+
 async function putCurrentItemNewSee( itemId, seen ){
     let stringUid = window.localStorage.getItem('uid') || 'alexei suzdalenko';
     seen++;

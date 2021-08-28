@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import firebase from 'firebase/app';
+import lang from '@/languages/reslang';
 
 var firebaseConfig = {
     apiKey: "AIzaSyAr0Wa_8q0Gacc9EsdVvb_oomnPPH7tydE",
@@ -17,5 +18,6 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig); // firebase.analytics();
 
-
-createApp(App).use(store).use(router).mount('#app');
+let app = createApp(App)
+app.config.globalProperties.language = lang.languageObj;
+app.use(store).use(router).mount('#app');

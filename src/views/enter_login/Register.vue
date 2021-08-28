@@ -9,7 +9,7 @@
                             <div class="col-lg-6" style="height: 70vh;">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-2">Registrarse</h1><br>
+                                        <h1 class="h4 text-gray-900 mb-2">{{ register }}</h1><br>
                                     </div>
                                     <form class="user">
                                         <FormRegister />
@@ -26,7 +26,13 @@
 
 <script>
 import FormRegister from '@/components/EnterComponent/FormRegister';
+import lang from '@/languages/reslang';
 export default {
-    components: { FormRegister }
+    components: { FormRegister },
+    data(){
+        return{
+          //  register: lang.language.register
+        }
+    }
 }
 </script>
